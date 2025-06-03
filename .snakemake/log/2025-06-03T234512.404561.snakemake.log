@@ -1,0 +1,7 @@
+FileNotFoundError in file /home/ngocminh/difficulty_predict_iqtree/Snakefile, line 45:
+[Errno 2] No such file or directory: '/data/example.phy'
+  File "/home/ngocminh/difficulty_predict_iqtree/Snakefile", line 45, in <module>
+  File "/home/ngocminh/difficulty_predict_iqtree/predict/msa.py", line 199, in __init__
+  File "/home/ngocminh/difficulty_predict_iqtree/predict/msa.py", line 423, in parse_msa
+  File "/home/ngocminh/difficulty_predict_iqtree/predict/msa.py", line 108, in _get_file_format
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open

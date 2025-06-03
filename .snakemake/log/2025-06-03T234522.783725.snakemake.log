@@ -1,0 +1,14 @@
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+results/example.phy/output_files/iqtree/inference/rand_97.treefile
+results/example.phy/output_files/iqtree/inference/rand_97.log
+results/example.phy/output_files/iqtree/inference/rand_97.ckp.gz
+results/example.phy/output_files/iqtree/inference/rand_97.iqtree
+results/example.phy/output_files/parsimony/seed_38.iqtree.startTree
+results/example.phy/output_files/parsimony/seed_38.iqtree.log

@@ -1,0 +1,64 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                        count
+---------------------------------------  -------
+all                                            1
+collect_eval_logs                              1
+collect_eval_trees                             1
+collect_parsimony_logs                         1
+collect_parsimony_trees                        1
+collect_plausible_trees                        1
+collect_search_logs                            1
+collect_search_trees                           1
+compute_msa_features                           1
+database_to_training_dataframe                 1
+iqtree_filter_unique_tree_topologies           1
+iqtree_pars_tree                              50
+iqtree_rand_tree                              50
+iqtree_rf_distance_search_trees                1
+iqtree_rfdistance_eval_trees                   1
+iqtree_rfdistance_parsimony_trees              1
+iqtree_rfdistance_plausible_trees              1
+iqtree_significance_tests_on_eval_trees        1
+move_db                                        1
+parsimony_tree                               100
+reevaluate_iqtree_pars_tree                   50
+reevaluate_iqtree_rand_tree                   50
+save_best_eval_tree                            1
+save_data                                      1
+total                                        319
+
+Select jobs to execute...
+
+[Tue Jun  3 23:20:33 2025]
+rule iqtree_rand_tree:
+    output: results/example.phy/output_files/iqtree/inference/rand_97.treefile, results/example.phy/output_files/iqtree/inference/rand_97.log, results/example.phy/output_files/iqtree/inference/rand_97.ckp.gz, results/example.phy/output_files/iqtree/inference/rand_97.iqtree
+    log: results/example.phy/output_files/iqtree/inference/rand_97.snakelog
+    jobid: 101
+    reason: Missing output files: results/example.phy/output_files/iqtree/inference/rand_97.treefile, results/example.phy/output_files/iqtree/inference/rand_97.iqtree, results/example.phy/output_files/iqtree/inference/rand_97.log
+    wildcards: msa=example.phy, seed=97
+    resources: tmpdir=/tmp
+
+
+[Tue Jun  3 23:20:33 2025]
+rule parsimony_tree:
+    output: results/example.phy/output_files/parsimony/seed_38.iqtree.startTree, results/example.phy/output_files/parsimony/seed_38.iqtree.log
+    jobid: 254
+    reason: Missing output files: results/example.phy/output_files/parsimony/seed_38.iqtree.log, results/example.phy/output_files/parsimony/seed_38.iqtree.startTree
+    wildcards: msa=example.phy, seed=38
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Tue Jun  3 23:22:29 2025]
+Error in rule iqtree_rand_tree:
+    jobid: 101
+    output: results/example.phy/output_files/iqtree/inference/rand_97.treefile, results/example.phy/output_files/iqtree/inference/rand_97.log, results/example.phy/output_files/iqtree/inference/rand_97.ckp.gz, results/example.phy/output_files/iqtree/inference/rand_97.iqtree
+    log: results/example.phy/output_files/iqtree/inference/rand_97.snakelog (check log file(s) for error details)
+    shell:
+        /usr/bin/iqtree2 -s /home/ngocminh/difficulty_predict_iqtree/data/example.phy -m GTR+G4+FO -pre results/example.phy/output_files/iqtree/inference/rand_97 -seed 97 -nt 2 -t RANDOM > results/example.phy/output_files/iqtree/inference/rand_97.iqtree 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2025-06-03T232032.006167.snakemake.log

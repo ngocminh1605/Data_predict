@@ -1,0 +1,54 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                        count
+---------------------------------------  -------
+all                                            1
+collect_eval_logs                              1
+collect_eval_trees                             1
+collect_parsimony_logs                         1
+collect_parsimony_trees                        1
+collect_plausible_trees                        1
+collect_search_logs                            1
+collect_search_trees                           1
+compute_msa_features                           1
+database_to_training_dataframe                 1
+iqtree_filter_unique_tree_topologies           1
+iqtree_pars_tree                              50
+iqtree_rand_tree                              50
+iqtree_rf_distance_search_trees                1
+iqtree_rfdistance_eval_trees                   1
+iqtree_rfdistance_parsimony_trees              1
+iqtree_rfdistance_plausible_trees              1
+iqtree_significance_tests_on_eval_trees        1
+move_db                                        1
+parsimony_tree                               100
+reevaluate_iqtree_pars_tree                   50
+reevaluate_iqtree_rand_tree                   50
+save_best_eval_tree                            1
+save_data                                      1
+total                                        319
+
+Select jobs to execute...
+
+[Tue Jun  3 23:05:36 2025]
+rule parsimony_tree:
+    output: results/example.phy/output_files/parsimony/seed_55.iqtree.startTree, results/example.phy/output_files/parsimony/seed_55.iqtree.log
+    jobid: 271
+    reason: Missing output files: results/example.phy/output_files/parsimony/seed_55.iqtree.startTree, results/example.phy/output_files/parsimony/seed_55.iqtree.log
+    wildcards: msa=example.phy, seed=55
+    resources: tmpdir=/tmp
+
+[Tue Jun  3 23:05:36 2025]
+rule parsimony_tree:
+    output: results/example.phy/output_files/parsimony/seed_51.iqtree.startTree, results/example.phy/output_files/parsimony/seed_51.iqtree.log
+    jobid: 267
+    reason: Missing output files: results/example.phy/output_files/parsimony/seed_51.iqtree.startTree, results/example.phy/output_files/parsimony/seed_51.iqtree.log
+    wildcards: msa=example.phy, seed=51
+    resources: tmpdir=/tmp
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-06-03T230535.044781.snakemake.log

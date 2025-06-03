@@ -1,0 +1,16 @@
+outdir: results/
+msa_paths: [
+   ../data/example.phy,
+]
+software:
+  raxml-ng:
+    command: /usr/bin/raxmlHPC # https://github.com/tschuelia/raxml-ng
+    threads: 2
+  iqtree:
+    command: /usr/bin/iqtree2 # http://www.iqtree.org
+    threads: 2
+
+_debug:
+  _num_pars_trees: 50
+  _num_rand_trees: 50
+  _num_parsimony_trees: 100

@@ -1,0 +1,42 @@
+Building DAG of jobs...
+IncompleteFilesException:
+The files below seem to be incomplete. If you are sure that certain files are not incomplete, mark them as complete with
+
+    snakemake --cleanup-metadata <filenames>
+
+To re-generate the files rerun your command with the --rerun-incomplete flag.
+Incomplete files:
+results/example.phy/output_files/iqtree/inference/pars_36.treefile
+results/example.phy/output_files/iqtree/inference/pars_36.log
+results/example.phy/output_files/iqtree/inference/pars_36.ckp.gz
+results/example.phy/output_files/iqtree/inference/pars_36.iqtree
+results/example.phy/output_files/iqtree/inference/pars_39.treefile
+results/example.phy/output_files/iqtree/inference/pars_39.log
+results/example.phy/output_files/iqtree/inference/pars_39.ckp.gz
+results/example.phy/output_files/iqtree/inference/pars_39.iqtree
+results/example.phy/output_files/iqtree/inference/pars_42.treefile
+results/example.phy/output_files/iqtree/inference/pars_42.log
+results/example.phy/output_files/iqtree/inference/pars_42.ckp.gz
+results/example.phy/output_files/iqtree/inference/pars_42.iqtree
+results/example.phy/output_files/iqtree/inference/pars_48.treefile
+results/example.phy/output_files/iqtree/inference/pars_48.log
+results/example.phy/output_files/iqtree/inference/pars_48.ckp.gz
+results/example.phy/output_files/iqtree/inference/pars_48.iqtree
+results/example.phy/output_files/iqtree/inference/rand_51.treefile
+results/example.phy/output_files/iqtree/inference/rand_51.log
+results/example.phy/output_files/iqtree/inference/rand_51.ckp.gz
+results/example.phy/output_files/iqtree/inference/rand_51.iqtree
+results/example.phy/output_files/iqtree/inference/rand_54.treefile
+results/example.phy/output_files/iqtree/inference/rand_54.log
+results/example.phy/output_files/iqtree/inference/rand_54.ckp.gz
+results/example.phy/output_files/iqtree/inference/rand_54.iqtree
+results/example.phy/output_files/iqtree/inference/rand_72.treefile
+results/example.phy/output_files/iqtree/inference/rand_72.log
+results/example.phy/output_files/iqtree/inference/rand_72.ckp.gz
+results/example.phy/output_files/iqtree/inference/rand_72.iqtree
+results/example.phy/output_files/iqtree/inference/rand_78.treefile
+results/example.phy/output_files/iqtree/inference/rand_78.log
+results/example.phy/output_files/iqtree/inference/rand_78.ckp.gz
+results/example.phy/output_files/iqtree/inference/rand_78.iqtree
+results/example.phy/output_files/parsimony/seed_36.iqtree.startTree
+results/example.phy/output_files/parsimony/seed_36.iqtree.log

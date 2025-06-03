@@ -1,0 +1,13 @@
+tree_files = ["D:\Data\output\eval_example.treefile", "D:\Data\output\eval_example1.treefile", "D:\Data\output\eval_example2.treefile", "D:\Data\output\eval_example3.treefile"]
+output_file = "example.trees"
+
+with open(output_file, "w") as fout:
+    for file in tree_files:
+        with open(file, "r") as f:
+            tree = f.read().strip()
+            # Đảm bảo kết thúc bằng ;
+            if not tree.endswith(";"):
+                tree += ";"
+            fout.write(tree + "\n")
+
+print(f"Saved {len(tree_files)} trees to {output_file}")
