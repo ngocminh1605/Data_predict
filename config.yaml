@@ -7,7 +7,7 @@ software:
     command: /usr/bin/raxmlHPC # https://github.com/tschuelia/raxml-ng
     threads: 2
   iqtree:
-    command: /usr/bin/iqtree # http://www.iqtree.org
+    command: /usr/bin/iqtree2 # http://www.iqtree.org
     threads: 2
 
 _debug:
