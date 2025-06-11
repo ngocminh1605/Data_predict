@@ -91,7 +91,7 @@ rule collect_parsimony_trees:
     output:
         all_trees = f"{output_files_parsimony_trees}AllParsimonyTrees.trees"
     shell:
-        "type {input.parsimony_trees} > {output.all_trees}"
+        "cat {input.parsimony_trees} > {output.all_trees}"
 
 
 rule collect_parsimony_logs:
@@ -103,4 +103,4 @@ rule collect_parsimony_logs:
     output:
         all_logs = f"{output_files_parsimony_trees}AllParsimonyLogs.log"
     shell:
-        "type {input.parsimony_logs} > {output.all_logs}"
+        "cat {input.parsimony_logs} > {output.all_logs}"

@@ -34,6 +34,37 @@ def get_iqtree_starting_llh(iqtree_file: FilePath) -> float:
     warnings.warn("The given file does not contain the starting llh " + iqtree_file)
     return -np.inf
 
+def get_rfdistance_results(iqtree_file: FilePath) -> Tuple [int, float]:
+    with open(file_path, 'r') as f:
+        lines = [line.strip() for line in f if line.strip()]
+    
+    # Đọc kích thước ma trận
+    size_line = lines[0]
+    n, _ = map(int, size_line.split())
+
+    # Đọc ma trận khoảng cách
+    matrix = np.zeros((n, n))
+    for i in range(n):
+        parts = lines[i + 1].split()
+        values = list(map(float, parts[1:]))
+        matrix[i, :] = values
+
+    distances = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            distances.append(matrix[i, j])
+
+    # Tính RF trung bình tương đối
+    avg_rel_rf = np.mean(distances)
+
+    tree_vectors = set()
+    for i in range(n):
+        tree_vectors.add(tuple(matrix[i]))
+
+    num_unique_topologies = len(tree_vectors)
+
+    return num_unique_topologies, avg_rel_rf
+
 
 def get_all_iqtree_llhs(iqtree_file: FilePath) -> List[float]:
     STR = "Optimal log-likelihood:"
@@ -94,28 +125,28 @@ def get_iqtree_runtimes(log_file: FilePath) -> List[float]:
     return all_times
 
 
-def get_iqtree_num_spr_rounds(log_file: FilePath) -> Tuple[int, int]:
-    slow_regex = regex.compile("SLOW\s+spr\s+round\s+(\d+)")
-    fast_regex = regex.compile("FAST\s+spr\s+round\s+(\d+)")
+# def get_iqtree_num_spr_rounds(log_file: FilePath) -> Tuple[int, int]:
+#     slow_regex = regex.compile("SLOW\s+spr\s+round\s+(\d+)")
+#     fast_regex = regex.compile("FAST\s+spr\s+round\s+(\d+)")
 
-    content = read_file_contents(log_file)
+#     content = read_file_contents(log_file)
 
-    slow = 0
-    fast = 0
+#     slow = 0
+#     fast = 0
 
-    for line in content:
-        if "SLOW spr round" in line:
-            m = regex.search(slow_regex, line)
-            if m:
-                slow_round = int(m.groups()[0])
-                slow = max(slow, slow_round)
-        if "FAST spr round" in line:
-            m = regex.search(fast_regex, line)
-            if m:
-                fast_round = int(m.groups()[0])
-                fast = max(fast, fast_round)
+#     for line in content:
+#         if "SLOW spr round" in line:
+#             m = regex.search(slow_regex, line)
+#             if m:
+#                 slow_round = int(m.groups()[0])
+#                 slow = max(slow, slow_round)
+#         if "FAST spr round" in line:
+#             m = regex.search(fast_regex, line)
+#             if m:
+#                 fast_round = int(m.groups()[0])
+#                 fast = max(fast, fast_round)
 
-    return slow, fast
+#     return slow, fast
 
 
 def rel_rfdistance_starting_final(
