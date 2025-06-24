@@ -1,0 +1,16 @@
+outdir: results/
+msa_paths: [
+   D:\difficulty_predict_iqtree\data\example.phy,
+]
+software:
+  raxml-ng:
+    command: /home/ngocminh/miniconda3/bin/raxml-ng # https://github.com/tschuelia/raxml-ng
+    threads: 2
+  iqtree:
+    command: D:/iqtree-2.4.0-Windows/bin/iqtree2.exe # http://www.iqtree.org
+    threads: 2
+
+_debug:
+  _num_pars_trees: 10
+  _num_rand_trees: 10
+  _num_parsimony_trees: 10
