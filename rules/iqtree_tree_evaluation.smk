@@ -23,7 +23,7 @@ rule reevaluate_iqtree_pars_tree:
         "-seed 0"
         "-pre {params.prefix}"
         "-nt 2"
-        "> {output.eval_log} "
+         "> {log} 2>&1"
 
 
 rule reevaluate_iqtree_rand_tree:
@@ -52,4 +52,4 @@ rule reevaluate_iqtree_rand_tree:
         "-pre {params.prefix} "
         "-nt {params.threads} "
         "-seed 0 "
-        "> {output.eval_log} "
+        "> {log} 2>&1"
