@@ -16,6 +16,6 @@ rule parsimony_tree:
             "-m {params.model} ",
             "-seed {wildcards.seed} ",
             "-pre {params.prefix} ",
-            "> {output.log} "
+            "> {log} 2>&1"
         ]
         shell("".join(cmd))
