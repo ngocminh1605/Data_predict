@@ -25,7 +25,7 @@ rule iqtree_pars_tree:
         "-pre {params.prefix} "
         "-nt {params.threads} "
         "-seed {wildcards.seed}"
-        "> {output.iqtree_log}"
+         "> {log} 2>&1"
 
 rule iqtree_rand_tree:
     """
@@ -51,4 +51,4 @@ rule iqtree_rand_tree:
         "-seed {wildcards.seed} "
         "-nt {params.threads} "
         "-t RANDOM "
-        "> {output.iqtree_log} "
+         "> {log} 2>&1"
