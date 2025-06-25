@@ -7,7 +7,7 @@ rule parsimony_tree:
         prefix  = output_files_parsimony_trees + "seed_{seed}",
         model   = lambda wildcards: iqtree_models[wildcards.msa]
     log:
-        lambda wildcards: output_files_parsimony_trees + f"seed_{wildcards.seed}.snakelog",
+        "results/{msa}/output_files/parsimony/seed_{seed}.snakelog",
     run:
         # Use iqtree
         cmd = [
