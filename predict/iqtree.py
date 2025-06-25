@@ -1,7 +1,7 @@
 import pathlib
 import subprocess
 from tempfile import TemporaryDirectory
-from typing import Optional
+from typing import Optional, Tuple
 
 from predict.config import DEFAULT_IQTREE_EXE
 from predict.custom_errors import IQTreeError
