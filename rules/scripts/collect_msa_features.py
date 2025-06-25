@@ -19,11 +19,11 @@ msa = MSA(msa_file)
 msa_features = {
     "taxa": msa.n_taxa,
     "sites": msa.n_sites,
-    "patterns": msa.n_patterns(),
-    "gaps": msa.proportion_gaps(),
-    "invariant": msa.proportion_invariant(),
-    "entropy": msa.entropy(),
-    # "column_entropies": msa.column_entropy(),
+    "patterns": msa.n_patterns,  # cached_property → không cần dấu ()
+    "gaps": msa.proportion_gaps,
+    "invariant": msa.proportion_invariant,
+    "entropy": msa.entropy(),  # hàm thường → cần gọi với ()
+    # "column_entropies": msa.column_entropy(),  # nếu có hàm này
     "bollback": msa.bollback_multinomial(),
     # "treelikeness": msa.treelikeness_score() if compute_treelikeness else None,
 }
