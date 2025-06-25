@@ -17,8 +17,8 @@ msa = MSA(msa_file)
 # patterns, gaps, invariant = iqtree.get_patterns_gaps_invariant(msa_file, model)
 
 msa_features = {
-    "taxa": msa.n_taxa(),
-    "sites": msa.n_sites(),
+    "taxa": msa.n_taxa,
+    "sites": msa.n_sites,
     "patterns": msa.n_patterns(),
     "gaps": msa.proportion_gaps(),
     "invariant": msa.proportion_invariant(),
