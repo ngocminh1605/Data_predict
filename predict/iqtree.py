@@ -3,8 +3,8 @@ import subprocess
 from tempfile import TemporaryDirectory
 from typing import Optional
 
-from config import DEFAULT_IQTREE_EXE
-from custom_errors import IQTreeError
+from predict.config import DEFAULT_IQTREE_EXE
+from predict.custom_errors import IQTreeError
 
 def run_iqtree_command(cmd: list[str]) -> None:
     """Helper method to run an IQ-TREE command.
