@@ -17,12 +17,12 @@ rule reevaluate_iqtree_pars_tree:
         f"{iqtree_tree_eval_prefix_pars}.snakelog"
     shell:
         "{iqtree_command} "
-        "-s {params.msa}"
-        "-m {params.model}"
-        "-te {input.best_tree_of_run}"
-        "-seed 0"
-        "-pre {params.prefix}"
-        "-nt 2"
+        "-s {params.msa} "
+        "-m {params.model} "
+        "-te {input.best_tree_of_run} "
+        "-seed 0 "
+        "-pre {params.prefix} "
+        "-nt 2 "
          "> {log} 2>&1"
 
 
