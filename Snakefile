@@ -85,8 +85,8 @@ iqtree_tree_eval_prefix_rand = iqtree_tree_eval_dir + "rand_{seed}"
 
 # Parsimony trees
 output_files_parsimony_trees = output_files_dir + "parsimony/"
-parsimony_tree_file_name = output_files_parsimony_trees + "seed_{seed}.iqtree.startTree"
-parsimony_log_file_name = output_files_parsimony_trees + "seed_{seed}.iqtree.log"
+parsimony_tree_file_name = output_files_parsimony_trees + "seed_{seed}.treefile"
+parsimony_log_file_name = output_files_parsimony_trees + "seed_{seed}.log"
 
 
 # rule chính tạo training data. parquet cho từng MSA 
